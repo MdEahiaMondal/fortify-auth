@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function () {
+    return view('home');
+})->middleware(['verified']);
+
+Route::get('/user/profile-information', function () {
+    return view('profile.edit');
+})->name('update.profile');
+
+Route::get('/user/update-password', function () {
+    return view('profile.update-password');
+})->name('update.password');
