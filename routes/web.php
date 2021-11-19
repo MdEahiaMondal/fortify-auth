@@ -28,3 +28,6 @@ Route::get('/user/profile-information', function () {
 Route::get('/user/update-password', function () {
     return view('profile.update-password');
 })->name('update.password');
+
+
+require __DIR__ . '/admin.php';
